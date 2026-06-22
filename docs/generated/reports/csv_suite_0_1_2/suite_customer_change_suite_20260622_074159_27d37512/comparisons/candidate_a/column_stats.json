@@ -1,0 +1,20 @@
+[
+  {
+    "column_name": "amount",
+    "compared_count": 3,
+    "diff_count": 0,
+    "match_count": 3
+  },
+  {
+    "column_name": "name",
+    "compared_count": 3,
+    "diff_count": 0,
+    "match_count": 3
+  },
+  {
+    "column_name": "status",
+    "compared_count": 3,
+    "diff_count": 0,
+    "match_count": 3
+  }
+]

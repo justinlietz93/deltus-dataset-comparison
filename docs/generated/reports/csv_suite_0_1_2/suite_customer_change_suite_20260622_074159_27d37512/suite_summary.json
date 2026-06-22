@@ -1,0 +1,12 @@
+{
+  "best_candidate_label": "candidate_a",
+  "best_candidate_score": 0,
+  "candidate_count": 2,
+  "candidates_with_warnings": 0,
+  "fail_count": 1,
+  "pass_count": 1,
+  "total_changed_cell_count": 1,
+  "total_missing_after_count": 1,
+  "total_missing_before_count": 1,
+  "warn_count": 0
+}

@@ -16,6 +16,8 @@ nav:
       - Result Contract: reference/result-contract.md
       - SQL Server Adapter: reference/sql-server-adapter.md
       - SQLite Adapter: reference/sqlite-adapter.md
+      - CSV Adapter: reference/csv-adapter.md
+      - Comparison Suite: reference/comparison-suite.md
   - Development:
       - Testing: development/testing.md
       - Implementation Plan: development/implementation-plan.md

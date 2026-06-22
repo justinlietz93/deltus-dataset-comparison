@@ -1,0 +1,17 @@
+{
+  "after_label": "candidate_b",
+  "before_label": "baseline",
+  "clear_nulls": true,
+  "created_at": "2026-06-22T07:42:00.002331Z",
+  "excluded_columns": [
+    "batch_id"
+  ],
+  "key_columns": [
+    "id"
+  ],
+  "max_detail_rows": 100,
+  "numeric_precision": null,
+  "run_id": "run_20260622_074200_44950aee",
+  "tool_name": "Deltus Dataset Comparison",
+  "tool_version": "0.1.2"
+}

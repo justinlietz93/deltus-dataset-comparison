@@ -1,0 +1,266 @@
+{
+  "candidate_summaries": [
+    {
+      "candidate_label": "candidate_a",
+      "cell_match_percent": 100.0,
+      "changed_cell_count": 0,
+      "compared_cell_count": 9,
+      "difference_score": 0,
+      "duplicate_key_count": 0,
+      "missing_after_count": 0,
+      "missing_before_count": 0,
+      "run_id": "run_20260622_074159_f62942f9",
+      "status": "PASS",
+      "type_mismatch_count": 0,
+      "warning_count": 0
+    },
+    {
+      "candidate_label": "candidate_b",
+      "cell_match_percent": 83.33333333333333,
+      "changed_cell_count": 1,
+      "compared_cell_count": 6,
+      "difference_score": 3,
+      "duplicate_key_count": 0,
+      "missing_after_count": 1,
+      "missing_before_count": 1,
+      "run_id": "run_20260622_074200_44950aee",
+      "status": "FAIL",
+      "type_mismatch_count": 0,
+      "warning_count": 0
+    }
+  ],
+  "manifest": {
+    "baseline_label": "baseline",
+    "candidate_count": 2,
+    "clear_nulls": true,
+    "created_at": "2026-06-22T07:41:59.995478Z",
+    "excluded_columns": [
+      "batch_id"
+    ],
+    "key_columns": [
+      "id"
+    ],
+    "max_detail_rows": 100,
+    "numeric_precision": null,
+    "suite_id": "suite_customer_change_suite_20260622_074159_27d37512",
+    "suite_name": "customer_change_suite",
+    "tool_name": "Deltus Dataset Comparison",
+    "tool_version": "0.1.2"
+  },
+  "results": [
+    {
+      "column_stats": [
+        {
+          "column_name": "amount",
+          "compared_count": 3,
+          "diff_count": 0,
+          "match_count": 3
+        },
+        {
+          "column_name": "name",
+          "compared_count": 3,
+          "diff_count": 0,
+          "match_count": 3
+        },
+        {
+          "column_name": "status",
+          "compared_count": 3,
+          "diff_count": 0,
+          "match_count": 3
+        }
+      ],
+      "detailed_differences": [],
+      "duplicate_keys": [],
+      "failures": [],
+      "manifest": {
+        "after_label": "candidate_a",
+        "before_label": "baseline",
+        "clear_nulls": true,
+        "created_at": "2026-06-22T07:41:59.998838Z",
+        "excluded_columns": [
+          "batch_id"
+        ],
+        "key_columns": [
+          "id"
+        ],
+        "max_detail_rows": 100,
+        "numeric_precision": null,
+        "run_id": "run_20260622_074159_f62942f9",
+        "tool_name": "Deltus Dataset Comparison",
+        "tool_version": "0.1.2"
+      },
+      "missing_after": [],
+      "missing_before": [],
+      "schema_overlap": {
+        "after_only_columns": [],
+        "before_only_columns": [],
+        "common_columns": [
+          "amount",
+          "batch_id",
+          "id",
+          "name",
+          "status"
+        ],
+        "comparable_columns": [
+          "amount",
+          "name",
+          "status"
+        ],
+        "excluded_columns": [
+          "batch_id"
+        ],
+        "key_columns": [
+          "id"
+        ]
+      },
+      "summary": {
+        "after_row_count": 3,
+        "before_row_count": 3,
+        "changed_cell_count": 0,
+        "compared_cell_count": 9,
+        "compared_row_count": 3,
+        "duplicate_key_count": 0,
+        "matched_key_count": 3,
+        "missing_after_count": 0,
+        "missing_before_count": 0,
+        "type_mismatch_count": 0,
+        "warning_count": 0
+      },
+      "type_mismatches": [],
+      "warnings": []
+    },
+    {
+      "column_stats": [
+        {
+          "column_name": "amount",
+          "compared_count": 2,
+          "diff_count": 0,
+          "match_count": 2
+        },
+        {
+          "column_name": "name",
+          "compared_count": 2,
+          "diff_count": 0,
+          "match_count": 2
+        },
+        {
+          "column_name": "status",
+          "compared_count": 2,
+          "diff_count": 1,
+          "match_count": 1
+        }
+      ],
+      "detailed_differences": [
+        {
+          "after_value": "inactive",
+          "before_value": "active",
+          "column_name": "status",
+          "key": {
+            "id": "2"
+          }
+        }
+      ],
+      "duplicate_keys": [],
+      "failures": [],
+      "manifest": {
+        "after_label": "candidate_b",
+        "before_label": "baseline",
+        "clear_nulls": true,
+        "created_at": "2026-06-22T07:42:00.002331Z",
+        "excluded_columns": [
+          "batch_id"
+        ],
+        "key_columns": [
+          "id"
+        ],
+        "max_detail_rows": 100,
+        "numeric_precision": null,
+        "run_id": "run_20260622_074200_44950aee",
+        "tool_name": "Deltus Dataset Comparison",
+        "tool_version": "0.1.2"
+      },
+      "missing_after": [
+        {
+          "key": {
+            "id": "3"
+          },
+          "row": {
+            "amount": "30.00",
+            "batch_id": "old",
+            "id": "3",
+            "name": "Linus",
+            "status": "inactive"
+          },
+          "side": "after"
+        }
+      ],
+      "missing_before": [
+        {
+          "key": {
+            "id": "4"
+          },
+          "row": {
+            "amount": "40.00",
+            "batch_id": "new",
+            "id": "4",
+            "name": "Barbara",
+            "status": "active"
+          },
+          "side": "before"
+        }
+      ],
+      "schema_overlap": {
+        "after_only_columns": [],
+        "before_only_columns": [],
+        "common_columns": [
+          "amount",
+          "batch_id",
+          "id",
+          "name",
+          "status"
+        ],
+        "comparable_columns": [
+          "amount",
+          "name",
+          "status"
+        ],
+        "excluded_columns": [
+          "batch_id"
+        ],
+        "key_columns": [
+          "id"
+        ]
+      },
+      "summary": {
+        "after_row_count": 3,
+        "before_row_count": 3,
+        "changed_cell_count": 1,
+        "compared_cell_count": 6,
+        "compared_row_count": 2,
+        "duplicate_key_count": 0,
+        "matched_key_count": 2,
+        "missing_after_count": 1,
+        "missing_before_count": 1,
+        "type_mismatch_count": 0,
+        "warning_count": 0
+      },
+      "type_mismatches": [],
+      "warnings": []
+    }
+  ],
+  "summary": {
+    "best_candidate_label": "candidate_a",
+    "best_candidate_score": 0,
+    "candidate_count": 2,
+    "candidates_with_warnings": 0,
+    "fail_count": 1,
+    "pass_count": 1,
+    "total_changed_cell_count": 1,
+    "total_missing_after_count": 1,
+    "total_missing_before_count": 1,
+    "warn_count": 0
+  },
+  "warnings": [
+    "One or more candidates produced missing rows, duplicate keys, or schema/type issues."
+  ]
+}

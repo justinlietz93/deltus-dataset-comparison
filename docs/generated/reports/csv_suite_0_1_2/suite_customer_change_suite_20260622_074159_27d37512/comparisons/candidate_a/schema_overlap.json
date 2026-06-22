@@ -1,0 +1,22 @@
+{
+  "after_only_columns": [],
+  "before_only_columns": [],
+  "common_columns": [
+    "amount",
+    "batch_id",
+    "id",
+    "name",
+    "status"
+  ],
+  "comparable_columns": [
+    "amount",
+    "name",
+    "status"
+  ],
+  "excluded_columns": [
+    "batch_id"
+  ],
+  "key_columns": [
+    "id"
+  ]
+}

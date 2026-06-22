@@ -1,0 +1,10 @@
+[
+  {
+    "after_value": "inactive",
+    "before_value": "active",
+    "column_name": "status",
+    "key": {
+      "id": "2"
+    }
+  }
+]

@@ -8,7 +8,7 @@ Deltus is the modern continuation of an earlier SQL Server + SSRS table comparis
 
 ## What the MVP does
 
-The `0.1.0` MVP provides:
+The `0.1.x` MVP line provides:
 
 - validated comparison contracts
 - schema inspection through source adapters
@@ -23,13 +23,16 @@ The `0.1.0` MVP provides:
 - XLSX evidence workbooks
 - local fixture tests
 - SQLite adapter and CLI proof path
+- CSV pair ingestion through SQLite
+- baseline-vs-candidate comparison suites
+- CSV suite manifests for baseline plus N candidate datasets
 - a read-only SQL Server adapter boundary
 
 ## First supported mode
 
 The first implementation target is SQL Server table comparison. The MVP also includes local fixture and SQLite adapters so the result contract, exports, and test flow work without a live SQL Server.
 
-Later adapters can add CSV, Parquet, DuckDB, PostgreSQL, or other sources without changing the domain model.
+Later adapters can add Parquet, DuckDB, PostgreSQL, or other sources without changing the domain model. CSV support already follows the adapter pattern by ingesting files into SQLite tables before comparison.
 
 ## Architecture
 
@@ -109,6 +112,52 @@ python -m comparison_evidence.adapters.driving.cli run-sqlite \
 ```
 
 This proves the adapter path against a real SQL table source while still avoiding a live SQL Server dependency.
+
+
+## Run a CSV comparison
+
+Compare two CSV files by ingesting them into SQLite and reusing the normal comparison engine:
+
+```bash
+python -m comparison_evidence.adapters.driving.cli run-csv \
+  --before-csv tests/fixtures/csv_suite/baseline.csv \
+  --after-csv tests/fixtures/csv_suite/candidate_b.csv \
+  --keys id \
+  --exclude batch_id \
+  --export-root exports
+```
+
+This creates the same JSON, HTML, and XLSX evidence package as the SQLite and fixture workflows.
+
+## Run a baseline comparison suite
+
+A suite compares one baseline dataset against multiple candidate datasets. This is useful when two or more dev scripts are intended to produce the same result and you want one evidence package that compares each candidate against the original.
+
+```bash
+python -m comparison_evidence.adapters.driving.cli run-csv-suite \
+  --manifest tests/fixtures/csv_suite/manifest.json \
+  --export-root exports
+```
+
+The suite output includes:
+
+```text
+exports/<suite_id>/
+├─ suite_result.json
+├─ suite_summary.json
+├─ candidate_summaries.json
+├─ suite_report.html
+├─ suite_report.xlsx
+└─ comparisons/
+   ├─ candidate_a/
+   │  ├─ result.json
+   │  ├─ report.html
+   │  └─ report.xlsx
+   └─ candidate_b/
+      ├─ result.json
+      ├─ report.html
+      └─ report.xlsx
+```
 
 ## Start the API
 

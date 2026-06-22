@@ -285,3 +285,64 @@ Current automated result:
 ```text
 20 passed
 ```
+
+---
+
+## MVP extension: `0.1.2` source-agnostic suites and CSV ingest
+
+This extension was pulled forward before the later roadmap waves because it is small, high-value, and follows the existing hexagonal boundary.
+
+### Phase 7: Add source-agnostic comparison suites
+
+#### Task 7.1: Define suite contract
+
+- [x] Step 7.1.1: Add a baseline dataset reference.
+- [x] Step 7.1.2: Add one-or-more candidate dataset references.
+- [x] Step 7.1.3: Reuse key-column, exclusion, null, precision, and detail-limit options.
+- [x] Step 7.1.4: Expand the suite contract into ordinary binary comparison contracts.
+
+#### Task 7.2: Run suite comparisons
+
+- [x] Step 7.2.1: Add `RunComparisonSuiteUseCase` above the existing comparison engine.
+- [x] Step 7.2.2: Validate every candidate comparison before emitting evidence.
+- [x] Step 7.2.3: Run baseline-vs-candidate comparisons through the selected source adapter.
+- [x] Step 7.2.4: Summarize candidate status as PASS, WARN, or FAIL.
+- [x] Step 7.2.5: Compute best candidate by lowest difference score.
+
+#### Task 7.3: Persist suite evidence
+
+- [x] Step 7.3.1: Write `suite_result.json`.
+- [x] Step 7.3.2: Write `suite_summary.json`.
+- [x] Step 7.3.3: Write `candidate_summaries.json`.
+- [x] Step 7.3.4: Write individual comparison evidence under `comparisons/<candidate>/`.
+- [x] Step 7.3.5: Render suite-level HTML and XLSX reports.
+
+### Phase 8: Add CSV ingestion without adding CSV-specific comparison logic
+
+#### Task 8.1: Ingest CSV into SQLite
+
+- [x] Step 8.1.1: Add CSV adapter that reads headered CSV files.
+- [x] Step 8.1.2: Normalize CSV table and column names into safe identifiers.
+- [x] Step 8.1.3: Materialize CSV rows into SQLite `TEXT` tables.
+- [x] Step 8.1.4: Return normal `DatasetReference` objects for comparison.
+
+#### Task 8.2: Add CSV pair command
+
+- [x] Step 8.2.1: Add `run-csv` CLI command.
+- [x] Step 8.2.2: Ingest before/after CSV files into SQLite.
+- [x] Step 8.2.3: Reuse existing comparison, JSON, HTML, and XLSX paths.
+
+#### Task 8.3: Add CSV suite command
+
+- [x] Step 8.3.1: Define CSV suite manifest format.
+- [x] Step 8.3.2: Add `run-csv-suite` CLI command.
+- [x] Step 8.3.3: Ingest baseline plus N candidate CSV files into SQLite.
+- [x] Step 8.3.4: Reuse the source-agnostic suite use case.
+
+#### Task 8.4: Verify the feature
+
+- [x] Step 8.4.1: Add unit tests for suite contracts and summaries.
+- [x] Step 8.4.2: Add integration tests for CSV ingestion.
+- [x] Step 8.4.3: Add integration tests for SQLite-backed suites.
+- [x] Step 8.4.4: Add e2e CLI tests for CSV pair and CSV suite workflows.
+- [x] Step 8.4.5: Update README, docs, and release notes.

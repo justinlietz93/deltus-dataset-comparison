@@ -1,0 +1,12 @@
+{
+  "suite_name": "customer_change_suite",
+  "baseline": {"name": "baseline", "path": "baseline.csv"},
+  "candidates": [
+    {"name": "candidate_a", "path": "candidate_a.csv"},
+    {"name": "candidate_b", "path": "candidate_b.csv"}
+  ],
+  "key_columns": ["id"],
+  "excluded_columns": ["batch_id"],
+  "clear_nulls": true,
+  "max_detail_rows": 100
+}

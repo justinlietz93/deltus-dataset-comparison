@@ -184,7 +184,7 @@ class TabularComparisonEngine:
             run_id=rid,
             created_at=created,
             tool_name="Deltus Dataset Comparison",
-            tool_version="0.1.0",
+            tool_version="0.1.2",
             before_label=contract.before.label(),
             after_label=contract.after.label(),
             key_columns=contract.key_columns,

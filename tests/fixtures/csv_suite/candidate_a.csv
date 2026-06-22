@@ -1,0 +1,4 @@
+id,name,status,amount,batch_id
+1,Ada,active,10.00,new
+2,Grace,active,20.00,new
+3,Linus,inactive,30.00,new

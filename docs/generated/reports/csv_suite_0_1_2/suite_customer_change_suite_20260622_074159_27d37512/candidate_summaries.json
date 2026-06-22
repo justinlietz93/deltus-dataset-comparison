@@ -1,0 +1,30 @@
+[
+  {
+    "candidate_label": "candidate_a",
+    "cell_match_percent": 100.0,
+    "changed_cell_count": 0,
+    "compared_cell_count": 9,
+    "difference_score": 0,
+    "duplicate_key_count": 0,
+    "missing_after_count": 0,
+    "missing_before_count": 0,
+    "run_id": "run_20260622_074159_f62942f9",
+    "status": "PASS",
+    "type_mismatch_count": 0,
+    "warning_count": 0
+  },
+  {
+    "candidate_label": "candidate_b",
+    "cell_match_percent": 83.33333333333333,
+    "changed_cell_count": 1,
+    "compared_cell_count": 6,
+    "difference_score": 3,
+    "duplicate_key_count": 0,
+    "missing_after_count": 1,
+    "missing_before_count": 1,
+    "run_id": "run_20260622_074200_44950aee",
+    "status": "FAIL",
+    "type_mismatch_count": 0,
+    "warning_count": 0
+  }
+]

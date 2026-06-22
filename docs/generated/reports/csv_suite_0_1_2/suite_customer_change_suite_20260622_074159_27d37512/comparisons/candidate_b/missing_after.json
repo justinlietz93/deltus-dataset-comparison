@@ -1,0 +1,15 @@
+[
+  {
+    "key": {
+      "id": "3"
+    },
+    "row": {
+      "amount": "30.00",
+      "batch_id": "old",
+      "id": "3",
+      "name": "Linus",
+      "status": "inactive"
+    },
+    "side": "after"
+  }
+]

@@ -1,56 +1,41 @@
 # Release Notes
 
-## v0.1.1 SQLite Verification
+## 0.1.2
 
-Deltus now has a SQLite adapter proof path for local testing without SQL Server.
+Adds the first source-agnostic comparison-suite workflow and CSV ingestion path.
 
-### Added
+- Added `ComparisonSuiteContract` for baseline-vs-candidate comparison suites.
+- Added `ComparisonSuiteResult`, candidate summaries, suite status, and best-candidate scoring.
+- Added `RunComparisonSuiteUseCase` above the existing binary comparison engine.
+- Added CSV ingestion adapter that materializes CSV files into SQLite tables.
+- Added `run-csv` CLI command for pair comparisons.
+- Added `run-csv-suite` CLI command for baseline plus N candidate CSV comparisons.
+- Added `run-suite-sqlite` CLI command for SQLite table suites.
+- Added suite HTML and XLSX report exporters.
+- Added CSV and suite docs.
+- Added CSV fixture suite and tests.
 
-- Read-only SQLite dataset source adapter.
-- SQLite fixture database generator.
-- SQLite CLI command: `run-sqlite`.
-- SQLite integration tests for schema inspection, changed values, different column counts, duplicate keys, and bounded reads.
-- SQLite e2e CLI export test.
+Validation:
 
-### Verification
-
-```bash
-26 passed
+```text
+34 passed
+front matter check passed
 ```
 
-## v0.1.0 MVP
+## 0.1.1
 
-Deltus now has a complete local-first MVP starting point.
+- Added SQLite source adapter path.
+- Added SQLite fixture database generation.
+- Added SQLite CLI and integration tests.
 
-### Added
+## 0.1.0
 
-- Pure tabular comparison engine.
-- Validated comparison contracts.
-- Schema projection for different-column-count tables.
-- Type mismatch reporting.
-- Duplicate key hard warnings.
-- Missing-before and missing-after rows.
-- Detailed cell differences.
-- Column-level comparison statistics.
-- JSON result package writer.
-- HTML evidence report exporter.
-- XLSX evidence workbook exporter.
-- Local fixture dataset adapter.
-- Read-only SQL Server adapter boundary.
-- Minimal FastAPI surface.
-- Fixture comparison CLI.
-- MVP fixture datasets and expected summaries.
-- Contract, unit, integration, and e2e tests.
+Initial MVP:
 
-### Notes
-
-- The SQL Server adapter is implemented but not live-verified in this environment.
-- The old SSRS/RDL path remains reference-only.
-- PDF export is intentionally deferred to a later polish wave.
-
-### Suggested local tag command
-
-```bash
-git tag -a v0.1.0 -m "Deltus 0.1.0 MVP"
-git push origin v0.1.0
-```
+- Pure comparison engine.
+- Local fixture source.
+- SQL Server source boundary.
+- JSON result package.
+- HTML report export.
+- XLSX workbook export.
+- Minimal API surface.

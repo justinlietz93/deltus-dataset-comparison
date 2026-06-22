@@ -1,0 +1,4 @@
+id,name,status,amount,batch_id
+1,Ada,active,10.00,new
+2,Grace,inactive,20.00,new
+4,Barbara,active,40.00,new

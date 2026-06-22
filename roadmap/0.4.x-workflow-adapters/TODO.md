@@ -137,3 +137,23 @@ Expand Deltus beyond the first SQL Server path without breaking the core contrac
 - [ ] Step 5.2.2: Update CLI docs.
 - [ ] Step 5.2.3: Update release notes.
 - [ ] Step 5.2.4: Tag `v0.4.0`.
+
+---
+
+## Pulled forward into `0.1.2`
+
+The following adapter/workflow items were completed early because SQLite made them low-risk and useful:
+
+### Phase PF1: CSV and suite workflow
+
+#### Task PF1.1: CSV ingestion
+
+- [x] Step PF1.1.1: CSV pair ingestion into SQLite.
+- [x] Step PF1.1.2: CSV suite manifest ingestion into SQLite.
+
+#### Task PF1.2: Source-agnostic suites
+
+- [x] Step PF1.2.1: Baseline plus N candidates as a general dataset feature.
+- [x] Step PF1.2.2: SQLite suite CLI.
+- [x] Step PF1.2.3: CSV suite CLI.
+- [x] Step PF1.2.4: Suite-level HTML/XLSX outputs.

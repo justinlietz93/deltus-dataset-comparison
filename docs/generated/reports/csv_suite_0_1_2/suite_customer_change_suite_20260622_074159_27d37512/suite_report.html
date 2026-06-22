@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Deltus Suite Report - suite_customer_change_suite_20260622_074159_27d37512</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; color: #172033; }
+    h1, h2 { margin-bottom: 0.35rem; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; }
+    .card { border: 1px solid #d5dae6; border-radius: 10px; padding: 0.85rem; background: #fbfcff; }
+    .label { color: #5f6b7a; font-size: 0.82rem; }
+    .value { font-size: 1.35rem; font-weight: 700; }
+    table { border-collapse: collapse; width: 100%; margin: 0.75rem 0 1.5rem; }
+    th, td { border: 1px solid #d5dae6; padding: 0.45rem 0.55rem; text-align: left; vertical-align: top; }
+    th { background: #eef2f8; }
+    .warning { border-left: 4px solid #a66a00; background: #fff8e8; padding: 0.65rem 0.85rem; margin: 0.4rem 0; }
+    .PASS { color: #116329; font-weight: 700; }
+    .WARN { color: #8a5a00; font-weight: 700; }
+    .FAIL { color: #9b1c1c; font-weight: 700; }
+    code { background: #eef2f8; padding: 0.1rem 0.25rem; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Deltus Comparison Suite Report</h1>
+  <p><strong>Suite:</strong> customer_change_suite<br />
+     <strong>Suite ID:</strong> <code>suite_customer_change_suite_20260622_074159_27d37512</code><br />
+     <strong>Created:</strong> 2026-06-22T07:41:59.995478+00:00<br />
+     <strong>Baseline:</strong> baseline<br />
+     <strong>Keys:</strong> id</p>
+
+  <h2>Suite Summary</h2>
+  <div class="cards">
+    <div class="card"><div class="label">Candidates</div><div class="value">2</div></div>
+    <div class="card"><div class="label">Pass</div><div class="value">1</div></div>
+    <div class="card"><div class="label">Warn</div><div class="value">0</div></div>
+    <div class="card"><div class="label">Fail</div><div class="value">1</div></div>
+    <div class="card"><div class="label">Changed cells</div><div class="value">1</div></div>
+    <div class="card"><div class="label">Missing before</div><div class="value">1</div></div>
+    <div class="card"><div class="label">Missing after</div><div class="value">1</div></div>
+    <div class="card"><div class="label">Best candidate</div><div class="value">candidate_a</div></div>
+  </div>
+
+  <h2>Warnings</h2>
+  <div class="warning">One or more candidates produced missing rows, duplicate keys, or schema/type issues.</div>
+
+  <h2>Candidate Results</h2>
+  <table><thead><tr><th>Candidate</th><th>Status</th><th>Score</th><th>Changed Cells</th><th>Missing Before</th><th>Missing After</th><th>Type Mismatches</th><th>Duplicate Keys</th><th>Warnings</th><th>Cell Match %</th><th>Report</th></tr></thead><tbody><tr><td>candidate_a</td><td class="PASS">PASS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100.00%</td><td><a href="comparisons/candidate_a/report.html">details</a></td></tr><tr><td>candidate_b</td><td class="FAIL">FAIL</td><td>3</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>83.33%</td><td><a href="comparisons/candidate_b/report.html">details</a></td></tr></tbody></table>
+</body>
+</html>
