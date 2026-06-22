@@ -1,4 +1,6 @@
-# Deltus: Dataset Comparison Studio
+![Deltus Comparison Tool](/assets/deltus-banner.png)
+
+# Streamline Your Dataset Regression Testing Locally
 
 A lightweight regression evidence generator for heterogeneous tabular data.
 
