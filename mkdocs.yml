@@ -1,0 +1,22 @@
+site_name: Comparison Evidence Studio
+docs_dir: docs/pages
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Quickstart: getting-started/quickstart.md
+  - User:
+      - Comparison Workflow: user/comparison-workflow.md
+      - Exporting Evidence: user/exporting-evidence.md
+  - Architecture:
+      - Overview: architecture/overview.md
+      - ADR 0001: architecture/decisions/ADR-0001-use-hexagonal-core.md
+      - ADR 0002: architecture/decisions/ADR-0002-replace-ssrs-with-report-reader.md
+  - Reference:
+      - Comparison Contract: reference/comparison-contract.md
+      - Result Contract: reference/result-contract.md
+      - SQL Server Adapter: reference/sql-server-adapter.md
+  - Development:
+      - Testing: development/testing.md
+      - Implementation Plan: development/implementation-plan.md
+  - Legacy:
+      - Original SSRS Tool: legacy/original-ssrs-tool.md

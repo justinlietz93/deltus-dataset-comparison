@@ -1,0 +1,9 @@
+flowchart TD
+    A[Before Dataset] --> Inspect[Schema Inspection]
+    B[After Dataset] --> Inspect
+    Inspect --> Contract[Comparison Contract]
+    Contract --> Validate[Validate Keys, Exclusions, Types]
+    Validate --> Compare[Run Comparison]
+    Compare --> Store[Persist Run]
+    Store --> Render[Render Report]
+    Render --> Export[Export Evidence Package]

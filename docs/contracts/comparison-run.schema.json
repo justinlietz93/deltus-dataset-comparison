@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ComparisonRunContract",
+  "type": "object",
+  "required": [
+    "before",
+    "after",
+    "key_columns"
+  ],
+  "properties": {
+    "before": {
+      "$ref": "#/$defs/datasetReference"
+    },
+    "after": {
+      "$ref": "#/$defs/datasetReference"
+    },
+    "key_columns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "excluded_columns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "clear_nulls": {
+      "type": "boolean",
+      "default": true
+    },
+    "numeric_precision": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "default": null
+    },
+    "max_detail_rows": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 10000
+    }
+  },
+  "$defs": {
+    "datasetReference": {
+      "type": "object",
+      "required": [
+        "source_id",
+        "object_name"
+      ],
+      "properties": {
+        "source_id": {
+          "type": "string"
+        },
+        "schema_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "object_name": {
+          "type": "string"
+        },
+        "display_name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

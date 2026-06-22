@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ComparisonResultPackage",
+  "type": "object",
+  "required": [
+    "manifest",
+    "summary",
+    "sections"
+  ],
+  "properties": {
+    "manifest": {
+      "type": "object"
+    },
+    "summary": {
+      "type": "object"
+    },
+    "sections": {
+      "type": "object",
+      "required": [
+        "column_stats",
+        "detailed_differences",
+        "missing_before",
+        "missing_after",
+        "warnings"
+      ],
+      "properties": {
+        "schema_overlap": {
+          "type": "array"
+        },
+        "type_mismatches": {
+          "type": "array"
+        },
+        "column_stats": {
+          "type": "array"
+        },
+        "detailed_differences": {
+          "type": "array"
+        },
+        "missing_before": {
+          "type": "array"
+        },
+        "missing_after": {
+          "type": "array"
+        },
+        "warnings": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
