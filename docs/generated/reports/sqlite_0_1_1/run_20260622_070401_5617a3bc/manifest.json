@@ -1,0 +1,15 @@
+{
+  "after_label": "changed_after",
+  "before_label": "identical_before",
+  "clear_nulls": true,
+  "created_at": "2026-06-22T07:04:01.495312Z",
+  "excluded_columns": [],
+  "key_columns": [
+    "id"
+  ],
+  "max_detail_rows": 10000,
+  "numeric_precision": null,
+  "run_id": "run_20260622_070401_5617a3bc",
+  "tool_name": "Deltus Dataset Comparison",
+  "tool_version": "0.1.0"
+}

@@ -1,0 +1,85 @@
+{
+  "column_stats": [
+    {
+      "column_name": "amount",
+      "compared_count": 2,
+      "diff_count": 1,
+      "match_count": 1
+    },
+    {
+      "column_name": "load_date",
+      "compared_count": 2,
+      "diff_count": 0,
+      "match_count": 2
+    },
+    {
+      "column_name": "name",
+      "compared_count": 2,
+      "diff_count": 0,
+      "match_count": 2
+    }
+  ],
+  "detailed_differences": [
+    {
+      "after_value": 22.0,
+      "before_value": 20.0,
+      "column_name": "amount",
+      "key": {
+        "id": 2
+      }
+    }
+  ],
+  "duplicate_keys": [],
+  "failures": [],
+  "manifest": {
+    "after_label": "dbo.changed_after",
+    "before_label": "dbo.identical_before",
+    "clear_nulls": true,
+    "created_at": "2026-06-22T06:58:06.103402Z",
+    "excluded_columns": [],
+    "key_columns": [
+      "id"
+    ],
+    "max_detail_rows": 10000,
+    "numeric_precision": null,
+    "run_id": "run_20260622_065806_fc0bf26a",
+    "tool_name": "Deltus Dataset Comparison",
+    "tool_version": "0.1.0"
+  },
+  "missing_after": [],
+  "missing_before": [],
+  "schema_overlap": {
+    "after_only_columns": [],
+    "before_only_columns": [],
+    "common_columns": [
+      "amount",
+      "id",
+      "load_date",
+      "name"
+    ],
+    "comparable_columns": [
+      "amount",
+      "load_date",
+      "name"
+    ],
+    "excluded_columns": [],
+    "key_columns": [
+      "id"
+    ]
+  },
+  "summary": {
+    "after_row_count": 2,
+    "before_row_count": 2,
+    "changed_cell_count": 1,
+    "compared_cell_count": 6,
+    "compared_row_count": 2,
+    "duplicate_key_count": 0,
+    "matched_key_count": 2,
+    "missing_after_count": 0,
+    "missing_before_count": 0,
+    "type_mismatch_count": 0,
+    "warning_count": 0
+  },
+  "type_mismatches": [],
+  "warnings": []
+}

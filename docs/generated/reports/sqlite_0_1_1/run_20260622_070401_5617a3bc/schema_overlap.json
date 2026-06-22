@@ -1,0 +1,19 @@
+{
+  "after_only_columns": [],
+  "before_only_columns": [],
+  "common_columns": [
+    "amount",
+    "id",
+    "load_date",
+    "name"
+  ],
+  "comparable_columns": [
+    "amount",
+    "load_date",
+    "name"
+  ],
+  "excluded_columns": [],
+  "key_columns": [
+    "id"
+  ]
+}

@@ -15,8 +15,11 @@ nav:
       - Comparison Contract: reference/comparison-contract.md
       - Result Contract: reference/result-contract.md
       - SQL Server Adapter: reference/sql-server-adapter.md
+      - SQLite Adapter: reference/sqlite-adapter.md
   - Development:
       - Testing: development/testing.md
       - Implementation Plan: development/implementation-plan.md
+      - Adding Source Adapters: development/adding-source-adapters.md
   - Legacy:
       - Original SSRS Tool: legacy/original-ssrs-tool.md
+      - Legacy Asset Inventory: legacy/legacy-asset-inventory.md

@@ -1,0 +1,200 @@
+{
+  "datasets": [
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "identical_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "load_date", "data_type": "datetime", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "load_date": "2026-01-01"},
+        {"id": 2, "name": "beta", "amount": 20.0, "load_date": "2026-01-01"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "identical_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "load_date", "data_type": "datetime", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "load_date": "2026-01-01"},
+        {"id": 2, "name": "beta", "amount": 20.0, "load_date": "2026-01-01"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "changed_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "load_date", "data_type": "datetime", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "load_date": "2026-01-01"},
+        {"id": 2, "name": "beta", "amount": 22.0, "load_date": "2026-01-01"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "different_columns_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "only_before", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "only_before": "B"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "different_columns_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "only_after", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "only_after": "A"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "excluded_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true},
+        {"name": "load_date", "data_type": "datetime", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0, "load_date": "2026-02-01"},
+        {"id": 2, "name": "beta", "amount": 20.0, "load_date": "2026-02-01"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "missing_before_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0},
+        {"id": 2, "name": "beta", "amount": 20.0},
+        {"id": 3, "name": "gamma", "amount": 30.0}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "missing_after_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "decimal", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": 10.0},
+        {"id": 2, "name": "beta", "amount": 20.0}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "type_mismatch_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true},
+        {"name": "amount", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha", "amount": "10.0"},
+        {"id": 2, "name": "beta", "amount": "20.0"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "duplicate_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha"},
+        {"id": 1, "name": "alpha_duplicate"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "duplicate_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [
+        {"id": 1, "name": "alpha"}
+      ]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "null_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [{"id": 1, "name": null}]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "empty_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "name", "data_type": "nvarchar", "nullable": true}
+      ],
+      "rows": [{"id": 1, "name": ""}]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "precision_before",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "amount", "data_type": "decimal", "nullable": true}
+      ],
+      "rows": [{"id": 1, "amount": 10.004}]
+    },
+    {
+      "source_id": "fixture",
+      "schema_name": "dbo",
+      "object_name": "precision_after",
+      "columns": [
+        {"name": "id", "data_type": "int", "nullable": false},
+        {"name": "amount", "data_type": "decimal", "nullable": true}
+      ],
+      "rows": [{"id": 1, "amount": 10.003}]
+    }
+  ]
+}

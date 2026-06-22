@@ -19,6 +19,7 @@ dependencies = [
 dev = [
   "pytest>=8.2",
   "pytest-cov>=5.0",
+  "jsonschema>=4.22",
   "ruff>=0.5",
   "mypy>=1.10",
 ]
@@ -30,3 +31,6 @@ src = ["src", "tests"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[project.scripts]
+deltus = "comparison_evidence.adapters.driving.cli.main:main"

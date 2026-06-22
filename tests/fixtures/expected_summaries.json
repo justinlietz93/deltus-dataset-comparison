@@ -1,0 +1,13 @@
+{
+  "identical": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 0, "type_mismatch_count": 0},
+  "one_changed_value": {"changed_cell_count": 1, "missing_before_count": 0, "missing_after_count": 0, "type_mismatch_count": 0},
+  "different_column_counts": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 0, "type_mismatch_count": 0},
+  "excluded_column_changed": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 0, "type_mismatch_count": 0},
+  "missing_before": {"changed_cell_count": 0, "missing_before_count": 1, "missing_after_count": 0, "type_mismatch_count": 0},
+  "missing_after": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 1, "type_mismatch_count": 0},
+  "mismatched_type": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 0, "type_mismatch_count": 1},
+  "duplicate_key": {"changed_cell_count": 0, "missing_before_count": 0, "missing_after_count": 0, "duplicate_key_count": 1},
+  "null_vs_empty_clear": {"changed_cell_count": 0},
+  "null_vs_empty_strict": {"changed_cell_count": 1},
+  "numeric_precision": {"changed_cell_count": 0}
+}

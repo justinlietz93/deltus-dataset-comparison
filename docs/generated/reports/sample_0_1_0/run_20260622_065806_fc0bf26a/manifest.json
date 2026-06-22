@@ -1,0 +1,15 @@
+{
+  "after_label": "dbo.changed_after",
+  "before_label": "dbo.identical_before",
+  "clear_nulls": true,
+  "created_at": "2026-06-22T06:58:06.103402Z",
+  "excluded_columns": [],
+  "key_columns": [
+    "id"
+  ],
+  "max_detail_rows": 10000,
+  "numeric_precision": null,
+  "run_id": "run_20260622_065806_fc0bf26a",
+  "tool_name": "Deltus Dataset Comparison",
+  "tool_version": "0.1.0"
+}
