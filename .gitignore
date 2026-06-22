@@ -12,3 +12,4 @@ exports/
 docs/reports/*.csv
 docs/reports/*.json
 legacy/
+*.egg-info/
